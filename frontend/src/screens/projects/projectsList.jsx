@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    margin: '.35rem 0 .35rem 0'
   }
 
 }));
@@ -24,22 +25,11 @@ const ProjectsList = () => {
       <Grid container spacing={3}>
         <UserDetails />
         <Grid item xs={12} sm={9}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
+          {
+            [...new Array(25)].map((i, k) => {
+              return <Paper className={classes.paper} key={k}>xs=12 sm=6</Paper>
+            })
+          }
         </Grid>
       </Grid>
     </div>

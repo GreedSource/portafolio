@@ -54,7 +54,7 @@ const UserDetails = () => {
               <span className="home__information">
                 <Phone className='home__icon' /> +52 (999) 138-87-48
               </span>
-              <Typography variant="h5" className={classes.section__title}>
+              <Typography variant="h6" className={classes.section__title}>
                 Redes Sociales
               </Typography>
               <span className="home__information">
