@@ -1,2 +1,3 @@
-# portafolio
-Portafolio de proyectos en los que he participado o desarrollado de cero
+# Portafolio
+
+Portafolio de proyetos por [Joel García](https://github.com/GreedSource)
