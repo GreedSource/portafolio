@@ -1,31 +1,33 @@
 {
-  "name": "portafolio",
+  "name": "portafolio-ts",
   "version": "1.0.0",
-  "description": "Portafolio de proyectos en los que he participado o desarrollado de cero",
-  "main": "index.js",
+  "description": "personal potafolio",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "start": "webpack server --config config/webpack.dev.js",
+    "build": "webpack server --config config/webpack.prod.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GreedSource/portafolio.git"
-  },
-  "author": "Joel Garcia",
+  "author": "greedsource",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GreedSource/portafolio/issues"
-  },
-  "homepage": "https://github.com/GreedSource/portafolio#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.2",
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.6",
-    "path": "^0.12.7"
+    "@material-ui/core": "^4.12.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.1.8",
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^6.1.0",
+    "css-modules-typescript-loader": "^4.0.1",
+    "html-webpack-plugin": "^5.3.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.1.0",
+    "typescript": "^3.9.10",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
   }
 }
