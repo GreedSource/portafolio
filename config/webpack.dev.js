@@ -13,6 +13,8 @@ const config = {
   devtool: "inline-source-map",
   devServer: {
     port: PORT,
+    liveReload: true,
+    hot: true,
     historyApiFallback: true,
     // contentBase: path.join(__dirname, "dist"),
     // disableHostCheck: true,
@@ -46,6 +48,9 @@ const config = {
       },
     }),
   ],
+  optimization: {
+    runtimeChunk: "single",
+  },
 };
 
 module.exports = merge(commonConfig, config);

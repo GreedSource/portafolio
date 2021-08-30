@@ -1,5 +1,5 @@
 {
-  "name": "portafolio-ts",
+  "name": "portafolio",
   "version": "1.0.0",
   "description": "personal potafolio",
   "main": "./src/index.js",
@@ -19,13 +19,13 @@
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.8",
-    "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^6.1.0",
     "css-modules-typescript-loader": "^4.0.1",
     "html-webpack-plugin": "^5.3.2",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.1.0",
-    "typescript": "^3.9.10",
+    "ts-loader": "^5.2.1",
+    "typescript": "^4.4.2",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.0.0"
