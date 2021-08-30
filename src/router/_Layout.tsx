@@ -1,16 +1,16 @@
 import { FC } from "react";
 import { Switch, Route } from "react-router-dom";
-import { Drawer } from "../components";
+import { Container, Skillbars } from "../components";
 
 const LayoutApp: FC = (): JSX.Element => {
   return (
-    <Switch>
-      <Drawer>
+    <Container>
+      <Switch>
         <Route exact path="/">
-          kappa
+          <Skillbars />
         </Route>
-      </Drawer>
-    </Switch>
+      </Switch>
+    </Container>
   );
 };
 export default LayoutApp;

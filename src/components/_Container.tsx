@@ -50,7 +50,7 @@ export interface DrawerProps {
   children: React.ReactNode;
 }
 
-export const Drawer = ({ children }: DrawerProps) => {
+export const Container = ({ children }: DrawerProps) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -75,4 +75,4 @@ export const Drawer = ({ children }: DrawerProps) => {
   );
 };
 
-export default Drawer;
+export default Container;
