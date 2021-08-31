@@ -38,7 +38,7 @@ export const Skillbars = (): JSX.Element => {
       },
     };
 
-  return <SkillBar skills={skills} colors={colors} />;
+  return <SkillBar skills={skills} colors={colors} height={18} />;
 };
 
 export default Skillbars;

@@ -46,6 +46,7 @@ export const Appbar = ({ open, handleDrawer }: AppbarProps) => {
       className={clsx(classes.root, {
         [classes.appBarShift]: open,
       })}
+      elevation={0}
     >
       <Toolbar>
         <IconButton
