@@ -5,6 +5,8 @@ const commonConfig = require("./webpack.common");
 const deps = require("../package.json").dependencies;
 const PUBLIC_PATH = `${process.env.PUBLIC_URL}/`;
 
+console.log(path.join(__dirname, "../dist/"));
+
 const config = {
   entry: "./src/index.tsx",
   mode: "production",
@@ -15,7 +17,7 @@ const config = {
   },
   output: {
     // publicPath: PUBLIC_PATH,
-    path: path.join(__dirname, "dist/"),
+    path: path.join(__dirname, "../dist/"),
     filename: "bundle.js",
   },
   resolve: {
