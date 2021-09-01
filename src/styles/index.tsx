@@ -1,5 +1,2 @@
-import { createTheme } from "@material-ui/core";
-
-export const theme = createTheme({
-  spacing: 10,
-});
+export * from "./themes";
+export * from "./context";

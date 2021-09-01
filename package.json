@@ -1,5 +1,5 @@
 {
-  "name": "portafolio",
+  "name": "@greedsource/portafolio",
   "version": "1.0.0",
   "description": "personal potafolio",
   "main": "index.js",
