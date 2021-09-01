@@ -1,7 +1,17 @@
 import { createTheme } from "@material-ui/core";
 
-export const lightTheme = createTheme({
-  spacing: 10,
-});
+import { OverridesTheme, ThemeProps } from "./_overrides";
 
-export default lightTheme;
+const Props = {};
+
+const mergedProps = {
+  ...ThemeProps,
+  ...Props,
+};
+
+export const lightThemeProps = {
+  overrides: OverridesTheme,
+  props: mergedProps,
+};
+
+export default lightThemeProps;

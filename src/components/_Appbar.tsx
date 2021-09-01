@@ -62,11 +62,11 @@ export const Appbar = ({ open, handleDrawer }: AppbarProps) => {
   };
   return (
     <AppBar
+      color="default"
       position="fixed"
       className={clsx(classes.root, {
         [classes.appBarShift]: open,
       })}
-      elevation={0}
     >
       <Toolbar className={classes.toolbar}>
         <Box display="flex" alignItems="center">
@@ -80,7 +80,8 @@ export const Appbar = ({ open, handleDrawer }: AppbarProps) => {
             <Menu />
           </IconButton>
           <Typography variant="h6" noWrap>
-            ITI. Joel García
+            Material UI
+            {/* ITI. Joel García */}
           </Typography>
         </Box>
         <Box>

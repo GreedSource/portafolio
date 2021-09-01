@@ -1,10 +1,18 @@
-import { createTheme } from "@material-ui/core";
+import { OverridesTheme, ThemeProps } from "./_overrides";
 
-export const darkTheme = createTheme({
+const Props = {};
+
+const mergedProps = {
+  ...ThemeProps,
+  ...Props,
+};
+
+export const darkThemeProps = {
+  overrides: OverridesTheme,
+  props: mergedProps,
   palette: {
-    type: "dark",
+    type: "dark" as const,
   },
-  spacing: 10,
-});
+};
 
-export default darkTheme;
+export default darkThemeProps;
