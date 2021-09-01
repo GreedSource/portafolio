@@ -1,10 +1,17 @@
 import clsx from "clsx";
-import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  makeStyles,
+  Box,
+  Theme,
+  createStyles,
+  Tooltip,
+} from "@material-ui/core";
+import { Menu, BrightnessLow, BrightnessHigh } from "@material-ui/icons";
+import { useThemeListener, ChangeThemeAction } from "../styles";
 
 const drawerWidth = 240;
 
@@ -30,6 +37,9 @@ const useStyles = makeStyles((theme: Theme) =>
     hide: {
       display: "none",
     },
+    toolbar: {
+      justifyContent: "space-between",
+    },
   })
 );
 
@@ -40,6 +50,16 @@ export interface AppbarProps {
 
 export const Appbar = ({ open, handleDrawer }: AppbarProps) => {
   const classes = useStyles();
+  const { state, dispatch } = useThemeListener();
+  const handleThemeChange = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    dispatch(
+      new ChangeThemeAction(
+        state.theme === "lightTheme" ? "darkTheme" : "lightTheme"
+      )
+    );
+  };
   return (
     <AppBar
       position="fixed"
@@ -48,19 +68,37 @@ export const Appbar = ({ open, handleDrawer }: AppbarProps) => {
       })}
       elevation={0}
     >
-      <Toolbar>
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          onClick={handleDrawer}
-          edge="start"
-          className={clsx(classes.menuButton, open && classes.hide)}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" noWrap>
-          ITI. Joel García
-        </Typography>
+      <Toolbar className={classes.toolbar}>
+        <Box display="flex" alignItems="center">
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawer}
+            edge="start"
+            className={clsx(classes.menuButton, open && classes.hide)}
+          >
+            <Menu />
+          </IconButton>
+          <Typography variant="h6" noWrap>
+            ITI. Joel García
+          </Typography>
+        </Box>
+        <Box>
+          <Tooltip title="Change theme" aria-label="change">
+            <IconButton
+              color="inherit"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleThemeChange}
+            >
+              {state.theme === "lightTheme" ? (
+                <BrightnessHigh />
+              ) : (
+                <BrightnessLow />
+              )}
+            </IconButton>
+          </Tooltip>
+        </Box>
       </Toolbar>
     </AppBar>
   );
