@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Switch, Route } from "react-router-dom";
-import { Container, Skillbars } from "../components";
+import { Skillbars } from "../components";
+import { AppContainer as Container } from "@greedsource/utils";
 import { Button, Card } from "@material-ui/core";
 
 const LayoutApp: FC = (): JSX.Element => {
@@ -10,7 +11,7 @@ const LayoutApp: FC = (): JSX.Element => {
         <Route exact path="/">
           <Card>
             test
-            <Button>label</Button>
+            <Button color="primary">label</Button>
           </Card>
         </Route>
         <Route path="/skills">

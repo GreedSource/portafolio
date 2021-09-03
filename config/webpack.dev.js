@@ -16,12 +16,13 @@ const config = {
     liveReload: true,
     hot: true,
     historyApiFallback: true,
+    host: "0.0.0.0",
     // contentBase: path.join(__dirname, "dist"),
     // disableHostCheck: true,
   },
-  output: {
-    publicPath: PUBLIC_PATH,
-  },
+  // output: {
+  //   publicPath: PUBLIC_PATH,
+  // },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
   },
