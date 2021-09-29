@@ -1,24 +1,26 @@
-import { FC, useReducer } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { ThemeProvider } from "@greedsource/utils";
-import { LayoutApp } from "./router";
-import {
-  ThemeContext,
-  initialState,
-  themeReducer,
-  getThemeByName,
-} from "@greedsource/utils";
+import { FunctionComponent } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-const App: FC = () => {
-  const [state, dispatch] = useReducer(themeReducer, initialState);
+const App: FunctionComponent = (): JSX.Element => {
   return (
-    <ThemeContext state={state} dispatch={dispatch}>
-      <ThemeProvider theme={getThemeByName(state.theme)}>
-        <Router>
-          <LayoutApp />
-        </Router>
-      </ThemeProvider>
-    </ThemeContext>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 };
+
 export default App;
