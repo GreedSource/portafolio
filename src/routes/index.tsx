@@ -1,15 +1,24 @@
 import { FunctionComponent } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { HomeScreen, AboutScreen, ContactScreen } from "../screen";
+import { BrowserRouter as Router } from "react-router-dom";
+import { HomeView, AboutView, ContactView } from "../views";
+import { AppBar } from "../components";
+import { AnimatedRoutes, RouteTransition } from "../utils/animation";
 
 export const Routes: FunctionComponent = (): JSX.Element => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={HomeScreen} />
-        <Route path="/about" component={AboutScreen} />
-        <Route path="/contact" component={ContactScreen} />
-      </Switch>
+      <AppBar />
+      <AnimatedRoutes exitBeforeEnter initial={false}>
+        <RouteTransition exact path="/" slideUp={30}>
+          <HomeView />
+        </RouteTransition>
+        <RouteTransition path="/about" slideUp={30}>
+          <AboutView />
+        </RouteTransition>
+        <RouteTransition path="/contact" slideUp={30}>
+          <ContactView />
+        </RouteTransition>
+      </AnimatedRoutes>
     </Router>
   );
 };
