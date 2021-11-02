@@ -1,9 +1,10 @@
-import { FunctionComponent } from "react";
+import { VFC } from "react";
+import { Box } from "@mui/material";
 import { useAboutServices } from "./_services";
 
-export const AboutView: FunctionComponent = (): JSX.Element => {
+export const AboutView: VFC = (): JSX.Element => {
   const {} = useAboutServices();
-  return <div>About</div>;
+  return <Box>About</Box>;
 };
 
 export default AboutView;

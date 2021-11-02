@@ -5,7 +5,7 @@ import { DarkTheme } from "./theme";
 import Routes from "./routes";
 
 const App: FunctionComponent = (): JSX.Element => {
-  const notes = useSelector<any>((state) => state);
+  const notes = useSelector((state) => state);
   console.log(notes);
   return (
     <ThemeProvider theme={DarkTheme}>

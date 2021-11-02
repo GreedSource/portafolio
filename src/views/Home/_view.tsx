@@ -1,9 +1,10 @@
-import { FunctionComponent } from "react";
+import { VFC } from "react";
+import { Box } from "@mui/material";
 import { useHomeServices } from "./_services";
 
-export const HomeView: FunctionComponent = (): JSX.Element => {
+export const HomeView: VFC = (): JSX.Element => {
   const {} = useHomeServices();
-  return <div>Home</div>;
+  return <Box>Home</Box>;
 };
 
 export default HomeView;

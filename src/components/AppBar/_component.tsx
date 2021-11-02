@@ -20,6 +20,7 @@ export const AppBar: FunctionComponent = (): JSX.Element => {
           <Button onClick={() => handleRedirect("/")}>Home</Button>
           <Button onClick={() => handleRedirect("/about")}>About</Button>
           <Button onClick={() => handleRedirect("/contact")}>Contact</Button>
+          <Button onClick={() => handleRedirect("/resume")}>Resume</Button>
         </Toolbar>
       </MuiAppBar>
     </Box>

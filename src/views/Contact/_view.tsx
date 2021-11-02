@@ -1,9 +1,10 @@
-import { FunctionComponent } from "react";
+import { VFC } from "react";
+import { Box } from "@mui/material";
 import { useContactServices } from "./_services";
 
-export const ContactView: FunctionComponent = (): JSX.Element => {
+export const ContactView: VFC = (): JSX.Element => {
   const {} = useContactServices();
-  return <div>Contact</div>;
+  return <Box>Contact</Box>;
 };
 
 export default ContactView;
