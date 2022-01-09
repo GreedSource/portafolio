@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { HomeView, AboutView, ContactView, ResumeView } from "src/views";
 import { AppBar } from "src/components";
 import { AnimatedRoutes, RouteTransition } from "src/utils/animation";
-import { Box } from "@mui/material";
+import { Container, Box } from "@mui/material";
 
 export const Routes: FunctionComponent = (): JSX.Element => {
   return (
@@ -11,23 +11,25 @@ export const Routes: FunctionComponent = (): JSX.Element => {
       <AppBar />
       <Box
         sx={{
-          m: "10px",
+          m: "1rem",
         }}
       >
-        <AnimatedRoutes exitBeforeEnter initial={false}>
-          <RouteTransition exact path="/" slideUp={30}>
-            <HomeView />
-          </RouteTransition>
-          <RouteTransition path="/about" slideUp={30}>
-            <AboutView />
-          </RouteTransition>
-          <RouteTransition path="/contact" slideUp={30}>
-            <ContactView />
-          </RouteTransition>
-          <RouteTransition path="/resume" slideUp={30}>
-            <ResumeView />
-          </RouteTransition>
-        </AnimatedRoutes>
+        <Container>
+          <AnimatedRoutes exitBeforeEnter initial={false}>
+            <RouteTransition exact path="/" slideUp={30}>
+              <HomeView />
+            </RouteTransition>
+            <RouteTransition path="/about" slideUp={30}>
+              <AboutView />
+            </RouteTransition>
+            <RouteTransition path="/contact" slideUp={30}>
+              <ContactView />
+            </RouteTransition>
+            <RouteTransition path="/resume" slideUp={30}>
+              <ResumeView />
+            </RouteTransition>
+          </AnimatedRoutes>
+        </Container>
       </Box>
     </Router>
   );

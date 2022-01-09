@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { VFC } from "react";
 import {
   AppBar as MuiAppBar,
   Box,
@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import useAppBarServices from "./_services";
 
-export const AppBar: FunctionComponent = (): JSX.Element => {
+export const AppBar: VFC = (props): JSX.Element => {
   const { handleRedirect } = useAppBarServices();
   return (
     <Box sx={{ flexGrow: 1 }}>

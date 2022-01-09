@@ -1,12 +1,10 @@
-import { FunctionComponent } from "react";
-import { useSelector } from "react-redux";
+import { VFC } from "react";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { DarkTheme } from "./theme";
+// import { useSelector } from "react-redux";
 import Routes from "./routes";
 
-const App: FunctionComponent = (): JSX.Element => {
-  const notes = useSelector((state) => state);
-  console.log(notes);
+const App: VFC = (props): JSX.Element => {
   return (
     <ThemeProvider theme={DarkTheme}>
       <CssBaseline />
