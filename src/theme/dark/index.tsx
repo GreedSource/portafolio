@@ -1,5 +1,5 @@
-import { createTheme } from "@mui/material";
 import _ from "lodash";
+import { createTheme } from "@mui/material";
 import SharedThemeProps from "../shared";
 import palette from "./_Palette";
 
